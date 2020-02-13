@@ -1,13 +1,16 @@
 GIT SNIPPED:
 ============
 
+## Starting point
+## Show and Search
 ### Show all files changed between two commits:
 git log --name-only --pretty=oneline --full-index HEAD^^..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq
-
+## Rename, Remove and Undo
+## Commit and Archive
 ### Archive in tar.xz a repo
 git config tar.tar.xz.command "xz -c"
 git archive -o latest.zip HEAD
-
+## Patch and apply patch
 ### Make numbered patch series between 2 commits
 git format-patch ee8ab42a74bd82006100e549bda4105f279024c7..HEAD
 
