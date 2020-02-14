@@ -1,29 +1,31 @@
-GIT SNIPPED:
-============
+GIT:
+====
 
 ## Starting point
 ## Show and Search
+### View a file in a different git branch without changing branches
+> git show branch:file
 ### Show all files changed between two commits:
-git log --name-only --pretty=oneline --full-index HEAD^^..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq
+> git log --name-only --pretty=oneline --full-index HEAD^^..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq
 ## Rename, Remove and Undo
+### Rename a local and remote branch in git
+> git branch -m new-name
+> git push origin :old-name new-name
+> git push origin -u new-name
+### Revert all local changes to a branch and get back to the latest commit
+> git reset --hard HEAD
 ## Commit and Archive
 ### Archive in tar.xz a repo
-git config tar.tar.xz.command "xz -c"
-git archive -o latest.zip HEAD
+> git config tar.tar.xz.command "xz -c"
+> git archive -o latest.zip HEAD
 ## Patch and apply patch
 ### Make numbered patch series between 2 commits
-git format-patch ee8ab42a74bd82006100e549bda4105f279024c7..HEAD
+> git format-patch ee8ab42a74bd82006100e549bda4105f279024c7..HEAD
 
-### View a file in a different git branch without changing branches
-git show branch:file
 
-### Revert all local changes to a branch and get back to the latest commit
-git reset --hard HEAD
 
-### Rename a local and remote branch in git
-git branch -m new-name
-git push origin :old-name new-name
-git push origin -u new-name
+
+
 
 ### Keep branch b up to date with branch a (works if branch b is a remote branch)
 git checkout b
