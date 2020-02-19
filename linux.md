@@ -6,7 +6,7 @@ Linux Kernel
 > $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j\`nproc\`
 
 ### Install Compiled Modules
-> $ make ARCH=ARM modules_install INSTALL
+> $ make ARCH=ARM modules_install INSTALL_PATH=/home/work/nfs
 
 ## User Space
 ### df output, sorted by Use% and correctly maintaining header row
