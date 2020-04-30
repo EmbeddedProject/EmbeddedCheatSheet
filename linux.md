@@ -9,7 +9,7 @@ Linux Kernel
 > $ ./scripts/dtc/dtc -I dtb -O dts -o devicetree.dts devicetree.dtb
 
 ### Install Compiled Modules
-> $ make ARCH=ARM modules_install INSTALL_PATH=/home/work/nfs
+> $ make ARCH=ARM modules_install INSTALL_MOD_PATH=/home/work/nfs
 
 Linux User Space
 ================
